@@ -22,15 +22,26 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
 
 ## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+ ###NextAuth
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Adapters: Used to store data in the database. In NextAuth we used [Prisma](https://authjs.dev/reference/adapter/prisma).
+See [Best practice for instantiating PrismaClient with Next.js](https://www.prisma.io/docs/orm/more/help-and-troubleshooting/help-articles/nextjs-prisma-client-dev-practices#problem)
+To fix Prisma error on dev env only.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Database: Used [supabase](https://supabase.com/)
 
-## Deploy on Vercel
+- create new database project
+- from settings / database / connection string: URI .. copy the link
+- Use it to replace DATABASE_URL in .env file and add the project password.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+To test Run: **npx prisma db push** to populate your Database with Prisma schema
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### register new dev application in GitHub
+
+github profile / settings/ Register a new OAuth application:
+For Authorization callback URL: use the NextAuth pattern
+**<http://localhost:3000/api/auth/callback/(github)>** where github this time and maybe google for google callback url ..
+
+## register email via resend
+
+see this [link](https://youtu.be/gPQ9SD_qpuk?t=1904)
