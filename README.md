@@ -45,3 +45,7 @@ For Authorization callback URL: use the NextAuth pattern
 ## register email via resend
 
 see this [link](https://youtu.be/gPQ9SD_qpuk?t=1904)
+
+### Deployed project
+
+<https://next-auth-nextjs14.vercel.app/>
