@@ -22,7 +22,7 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
 
 ## Learn More
 
- ###NextAuth
+### NextAuth
 
 Adapters: Used to store data in the database. In NextAuth we used [Prisma](https://authjs.dev/reference/adapter/prisma).
 See [Best practice for instantiating PrismaClient with Next.js](https://www.prisma.io/docs/orm/more/help-and-troubleshooting/help-articles/nextjs-prisma-client-dev-practices#problem)
